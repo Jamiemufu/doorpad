@@ -1,0 +1,13 @@
+{
+    "require":
+    {
+        "psr/log": "1.*",
+        "twig/twig": "1.*",
+        "aws/aws-sdk-php": "2.*",
+        "swiftmailer/swiftmailer": "5.*",
+        "vlucas/phpdotenv": "2.*",
+        "patchwork/utf8": "1.*",
+        "mtdowling/cron-expression": "1.*",
+        "tholu/php-packer": "0.2"
+    }
+}

@@ -1,0 +1,378 @@
+/*
+ * CSS reset
+ */
+
+* {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    vertical-align: baseline;
+}
+html,body {
+    width: 100%;
+}
+body {
+    margin: 0;
+}
+
+form {
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+div {
+    overflow: auto;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+img {
+    border: 0;
+    display: inline-block;
+}
+
+button,
+input {
+    line-height: normal;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+strong,
+b {
+    font-weight: bold;
+}
+
+em,
+i {
+    font-style: italic;
+}
+
+summary {
+    cursor: pointer;
+}
+
+pre {
+    white-space: pre-wrap;
+}
+
+q {
+    quotes: '\201C''\201D''\2018''\2019';
+}
+
+small {
+    font-size: 0.8em;
+}
+
+sub,
+sup {
+    position: relative;
+    font-size: 0.75em;
+    line-height: 0;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+// Variables
+
+@primary-color: #FB9C17;
+@secondary-color: #525C60;
+
+// Generic Styles
+
+body {
+    font-family: 'Roboto Slab', serif;
+}
+
+section.primary-color {
+    background-color: @primary-color;
+    min-height: 100%;
+}
+
+section.secondary-color {
+    background-color: @secondary-color;
+    min-height: 100%;
+    width: 100%;
+}
+
+.flex-container {
+    margin: 0 auto;
+    padding: 60px 0;
+    min-height: 100vh;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+}
+
+h3 {
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-size: 47px;
+    color: #ffffff;
+
+    span {
+        color: #5D6163;
+    }
+}
+
+// Home Page
+
+.title {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.title-top-margin {
+    padding-top: 140px;
+}
+
+.title-btm-margin {
+    padding-bottom: 50px;
+}
+
+.home-buttons {
+    margin: 0 auto;
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: space-around;
+
+    .button {
+        text-transform: uppercase;
+        color: #fff;
+
+        border: 1px solid #fff;
+
+        a {
+            color: #fff;
+        }
+    }
+}
+
+// Login Page
+
+.title-container {
+
+    width: 100%;
+    padding: 0 0 60px 30px;
+
+    img {
+        display: inline-block;
+        width: 39px;
+        height: auto;
+        margin-right: 15px;
+    }
+
+    h3 {
+        display: inline-block;
+        font-size: 40px;
+
+        span {
+            color: @primary-color;
+        }
+
+    }
+}
+
+.sign-container {
+
+    width: 100%;
+    padding: 15px 36px 0 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    h3 {
+        font-size: 40px;
+        text-align: left;
+        color: @primary-color;
+    }
+}
+
+.back-container {
+
+    width: 100%;
+    margin-top: 30px;
+    padding: 5px 36px 0 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    .button {
+        width: 125px;
+        padding: 10px 0;
+    }
+
+}
+
+.button {
+
+    font-family: 'Montserrat', Arial, sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    color: @primary-color;
+    font-size: 15px;
+    border: 1px solid @primary-color;
+    padding: 20px 0;
+    width: 200px;
+
+    a {
+        color: @primary-color;
+        font-size: 15px;
+        line-height: 22px;
+        vertical-align: middle;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+form.login {
+    width: 100%;
+}
+
+input {
+    width: 320px;
+    height: 32px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 15px;
+    color: @secondary-color;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.input {
+    margin: 20px;
+}
+
+.input-label {
+    margin: 10px;
+    display: block;
+    width: 200px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.input-reg {
+    text-transform: uppercase;
+}
+
+.input-reg--description {
+    font-size: 10px;
+    position: absolute;
+    margin-top: -5px;
+}
+
+#carReg::placeholder {
+    color: black;
+    opacity: 0.4;
+}
+
+// Logout Page
+
+.title-logout {
+    padding: 0 0 20px 0;
+
+    img {
+    padding-bottom: 25px;
+    width: 45px;
+    height: auto;
+    }
+}
+
+.visitors {    
+    max-width: 600px;
+    width: 100%;
+
+    .visitor {
+        width: 100%;
+        margin: 5px 0;
+        font-family: 'Montserrat', Arial, sans-serif;
+        font-size: 15px;
+        text-transform: uppercase;
+        color: #fff;
+        border-bottom: 1px solid #fff;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        &:first-of-type {
+            border-top: 1px solid white;
+            margin: 4px 0;
+        }
+
+        .button {
+            width: 200px;
+            padding: 10px 0;
+            border: 0;
+            text-align: right;
+
+            &.signout {
+                &:hover {
+                text-decoration: none;
+                color: #ffffff;
+                }
+                &:active {
+                text-decoration: none;
+                color: #ffffff;
+                }
+                &:focus {
+                text-decoration: none;
+                color: #ffffff;
+                }
+            }
+        }
+    }
+
+    .letter {
+        font-size: 15px;
+
+        .initial-letter {
+            color: @primary-color;
+            text-transform: uppercase;
+        }
+    }
+
+    .back-container {
+        padding: 0;
+    }
+
+}
+
+//clock display
+.home.datetime {
+    width: 400px;
+    height: 40px;
+    margin: 0 auto;
+    margin-top: 20px;
+    text-align: center;
+    padding-top: 5px;
+    font-size: 1.5em;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    color: #5D6163;
+}
